@@ -209,7 +209,7 @@ import {overlayHTML, signUpHtml, loginHTML, showLoginBox, showSignupBox, initial
     let addressedIsSelectedOrNot = false;
 
 document.getElementById('wallet').addEventListener('click',() => {
-var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
        if(!checkUserDataInLocalStorage[0]){
            showAlertPopupBody('Please Login')
        }
