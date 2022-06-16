@@ -460,7 +460,7 @@ async function doEmptyCart(id){
 
 document.getElementById('newAddress').addEventListener('click',()=>{
     // console.log('hello');
-    var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+    var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
     if(!checkUserDataInLocalStorage[0]){
       showAlertPopupBody('Please Login')
     }
