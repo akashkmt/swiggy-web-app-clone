@@ -209,7 +209,7 @@ import {overlayHTML, signUpHtml, loginHTML, showLoginBox, showSignupBox, initial
     let addressedIsSelectedOrNot = false;
 
 document.getElementById('wallet').addEventListener('click',() => {
-var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
        if(!checkUserDataInLocalStorage[0]){
            showAlertPopupBody('Please Login')
        }
@@ -251,7 +251,7 @@ var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')
 })
 
 document.getElementById('card').addEventListener('click',() => {
-var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
     if(!checkUserDataInLocalStorage[0]){
         showAlertPopupBody('Please Login')
     }
@@ -294,7 +294,7 @@ var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')
 })
 
 document.getElementById('banking').addEventListener('click',() => {
-var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
     if(!checkUserDataInLocalStorage[0]){
         showAlertPopupBody('Please Login')
     }
@@ -336,7 +336,7 @@ var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')
 })
 
 document.getElementById('upi').addEventListener('click',() => {
-var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
     if(!checkUserDataInLocalStorage[0]){
         showAlertPopupBody('Please Login')
     }
@@ -460,7 +460,7 @@ async function doEmptyCart(id){
 
 document.getElementById('newAddress').addEventListener('click',()=>{
     // console.log('hello');
-    var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+    var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
     if(!checkUserDataInLocalStorage[0]){
       showAlertPopupBody('Please Login')
     }
@@ -530,7 +530,7 @@ document.querySelector('#userAddressForm').addEventListener('submit', ()=>{
             location : document.getElementById('enteredLocation').value,
             locationType : selectedLocationType
          }
-         var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile'));
+         var checkUserDataInLocalStorage = JSON.parse(localStorage.getItem('userProfile')) || [];
         // console.log(flatNumber,landmark,location,locationType);
         // console.log(addressDetails)
         getSingleDataFromDataBase(checkUserDataInLocalStorage[1]).then((result)  => {
@@ -625,7 +625,8 @@ function changeBorder(id,length){
     }
     // console.log(id,length)
 }
-if(JSON.parse(localStorage.getItem('userProfile'))[0]){
+var userInLS = JSON.parse(localStorage.getItem('userProfile')) || [];
+if(userInLS[0]){
     showCartItems();
 }
 
