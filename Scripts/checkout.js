@@ -558,7 +558,7 @@ async function putAddressDataToDataBase(allAddresses,id){
         console.log(error)
     }
 }
-var lsUser = (JSON.parse(localStorage.getItem('userProfile')))
+var lsUser = (JSON.parse(localStorage.getItem('userProfile'))) || [];
 if(lsUser[0]){
     getSingleDataFromDataBase((JSON.parse(localStorage.getItem('userProfile')))[1]).then((result)=>{
         showGridDivs(result.userAddresses);

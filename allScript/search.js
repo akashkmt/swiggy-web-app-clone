@@ -308,7 +308,7 @@ async function getSingleUserDataFromDataBase(id) {
 }
 
 function showCartAtNavBar(){
-    let loggedUserData = JSON.parse(localStorage.getItem('userProfile'));
+    let loggedUserData = JSON.parse(localStorage.getItem('userProfile')) || [];
     if(loggedUserData[0]){
         getSingleUserDataFromDataBase(loggedUserData[1]).then((response) => {
             document.querySelector('#noOfCartItems').style.display = 'block';
