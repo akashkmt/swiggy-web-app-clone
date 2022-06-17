@@ -75,7 +75,7 @@ async function displayRestuarantList() {
 
 
             let restaurantImgAnchor = document.createElement("a");
-            restaurantImgAnchor.href = "../restaurantPage.html";
+            restaurantImgAnchor.href = "restaurantPage.html";
 
             restaurantImgAnchor.addEventListener('click', function() {
                     
