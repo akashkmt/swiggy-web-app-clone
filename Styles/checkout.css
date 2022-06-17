@@ -92,6 +92,13 @@ body{
     /* padding: 1px; */
     /* margin: auto; */
 }
+#helpCheckoutBox>a{
+    text-decoration: none;
+    color: #282c3f;
+}
+#helpCheckoutBox>a:hover{
+    color: #FC8019;
+}
 .navBox:hover{
     cursor: pointer;
     color: #FC8019;

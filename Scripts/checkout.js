@@ -715,7 +715,7 @@ document.getElementById('goToLoginBox').addEventListener('click', () => {
     showLoginBox();
 })
 
-document.querySelector('.navBox').addEventListener('click',()=>{
-    window.location.href = './help.html';
-    // console.log('hii');
-})
+// document.querySelector('.navBox').addEventListener('click',()=>{
+//     window.location.href = './help.html';
+//     // console.log('hii');
+// })
