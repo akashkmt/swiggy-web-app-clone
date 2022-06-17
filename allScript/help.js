@@ -75,7 +75,7 @@ showProfileSection();
 
 async function getSingleDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {
@@ -85,7 +85,7 @@ async function getSingleDataFromDataBase(id) {
 
 async function getSingleUserDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {

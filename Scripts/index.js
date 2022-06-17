@@ -3,7 +3,7 @@ let restaurantListContainer = document.getElementById("restaurantListContainer")
 
 async function displayRestuarantList() {
 
-    let res = await fetch(`http://localhost:3000/Restaurants`);
+    let res = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Restaurants`);
     let restaurantList = await res.json();
     let data = JSON.parse(JSON.stringify(restaurantList));
 
@@ -320,7 +320,7 @@ document.getElementById('footerPart').innerHTML = footerHTML();
 
 // async function postUserToDataBase(userDetails) {
 //     try {
-//         let post = await fetch(`http://localhost:3000/Users`, {
+//         let post = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users`, {
 //             method: "POST",
 //             body: JSON.stringify(userDetails),
 //             headers: { "Content-Type": "application/json" }
@@ -334,7 +334,7 @@ document.getElementById('footerPart').innerHTML = footerHTML();
 
 // async function getDataFromDataBase() {
 //     try {
-//         let result = await fetch(`http://localhost:3000/Users`);
+//         let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users`);
 //         let response = await result.json();
 //         return response;
 //     } catch (error) {
@@ -345,7 +345,7 @@ document.getElementById('footerPart').innerHTML = footerHTML();
 
 async function getSingleDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {
@@ -420,7 +420,7 @@ async function getSingleDataFromDataBase(id) {
 
 async function getSingleUserDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {

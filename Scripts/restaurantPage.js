@@ -10,7 +10,7 @@ var restaurantId = localStorage.getItem('restaurantId');
 // console.log(restaurantId);
 
 async function getSingleDataFromDataBase(restaurantId) {
-    const response = await fetch(`http://localhost:3000/restaurants/${restaurantId}`);
+    const response = await fetch(`https://swiggy-web-app-clone.herokuapp.com/restaurants/${restaurantId}`);
     const data = await response.json();
     // console.log(data);
     // return data;
@@ -21,7 +21,7 @@ getSingleDataFromDataBase(restaurantId);
 
 async function getSingleUserDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {
@@ -163,7 +163,7 @@ showCartAtNavBar();
 
 async function postCartInDataBase(userCart,id){
     try {
-        var response = await fetch(`http://localhost:3000/Users/${id}`,{
+        var response = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`,{
             method: 'PATCH',
             body : JSON.stringify({
                 userCart: userCart

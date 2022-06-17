@@ -138,7 +138,7 @@ import {overlayHTML, signUpHtml, loginHTML, showLoginBox, showSignupBox, initial
     
     async function postUserToDataBase(userDetails){
         try {
-            let post = await fetch(`http://localhost:3000/Users`,{
+            let post = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users`,{
                 method : "POST",
                 body : JSON.stringify(userDetails),
                 headers : {"Content-Type" : "application/json"}
@@ -152,7 +152,7 @@ import {overlayHTML, signUpHtml, loginHTML, showLoginBox, showSignupBox, initial
     
     async function getDataFromDataBase(){
         try {
-            let result = await fetch(`http://localhost:3000/Users`);
+            let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users`);
             let response = await result.json();
             return response;
         } catch (error) {
@@ -162,7 +162,7 @@ import {overlayHTML, signUpHtml, loginHTML, showLoginBox, showSignupBox, initial
     
     async function getSingleDataFromDataBase(id){
         try {
-            let result = await fetch(`http://localhost:3000/Users/${id}`);
+            let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
             let response = await result.json();
             return response;
         } catch (error) {
@@ -446,7 +446,7 @@ cardForm.addEventListener('submit',() => {
 
 async function doEmptyCart(id){
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`,{
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`,{
             method : 'PATCH',
             body : JSON.stringify({
                 userCart : []
@@ -547,7 +547,7 @@ document.querySelector('#userAddressForm').addEventListener('submit', ()=>{
 
 async function putAddressDataToDataBase(allAddresses,id){
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`,{
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`,{
             method : 'PATCH',
             body : JSON.stringify({
                 userAddresses : allAddresses

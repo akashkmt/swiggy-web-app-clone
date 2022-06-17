@@ -5,7 +5,7 @@ import { navbarHTML } from '../componentsJs/navbar.js';
 document.getElementById("navbarContainer").innerHTML = navbarHTML();
 
 // async function fetchAndDisplayData(){
-//     let url = "http://localhost:3000/restaurantsAvailable";
+//     let url = "https://swiggy-web-app-clone.herokuapp.com/restaurantsAvailable";
 //     let res = await fetch(url);
 //     // console.log(res)
 //     let data = await res.json();
@@ -76,7 +76,7 @@ async function getList() {
     try {
         let search = document.getElementById("searchInput").value;
         let result = await fetch(
-            `http://localhost:3000/Restaurants/?q=${search}`
+            `https://swiggy-web-app-clone.herokuapp.com/Restaurants/?q=${search}`
         );
         // console.log(result);
         let data = await result.json();
@@ -95,7 +95,7 @@ async function getList() {
 async function dishesList() {
     let search = document.getElementById("searchInput").value;
     try {
-        let result = await fetch(`http://localhost:3000/Restaurants/?q=${search}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Restaurants/?q=${search}`);
         // console.log(result);
         let data = await result.json();
         // console.log(data);
@@ -289,7 +289,7 @@ showProfileSection();
 
 async function getSingleDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {
@@ -299,7 +299,7 @@ async function getSingleDataFromDataBase(id) {
 
 async function getSingleUserDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {

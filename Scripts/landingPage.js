@@ -95,7 +95,7 @@ function checkUserOnServers(userDetails) {
 
 async function postUserToDataBase(userDetails) {
     try {
-        let post = await fetch(`http://localhost:3000/Users`, {
+        let post = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users`, {
             method: "POST",
             body: JSON.stringify(userDetails),
             headers: { "Content-Type": "application/json" }
@@ -109,7 +109,7 @@ async function postUserToDataBase(userDetails) {
 
 async function getDataFromDataBase() {
     try {
-        let result = await fetch(`http://localhost:3000/Users`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users`);
         let response = await result.json();
         return response;
     } catch (error) {
@@ -119,7 +119,7 @@ async function getDataFromDataBase() {
 
 async function getSingleDataFromDataBase(id) {
     try {
-        let result = await fetch(`http://localhost:3000/Users/${id}`);
+        let result = await fetch(`https://swiggy-web-app-clone.herokuapp.com/Users/${id}`);
         let response = await result.json();
         return response;
     } catch (error) {
