@@ -1,7 +1,7 @@
 {
     "name": "swiggy-web-app-clone",
     "version": "1.0.0",
-    "description": "fake server with fake database",
+    "description": "swiggy-web-app-json-server",
     "main": "server.js",
     "scripts": { 
       "start": "node server.js" 
