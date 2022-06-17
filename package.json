@@ -1,19 +1,14 @@
 {
-    "name": "swiggy-clone",
+    "name": "swiggy-web-app-clone",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+    "description": "fake server with fake database",
+    "main": "server.js",
+    "scripts": { 
+      "start": "node server.js" 
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Jasmine-Shaikh/Swiggy-Clone.git"
-    },
-    "author": "",
+    "author": "Akash",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Jasmine-Shaikh/Swiggy-Clone/issues"
-    },
-    "homepage": "https://github.com/Jasmine-Shaikh/Swiggy-Clone#readme"
-}
+    "dependencies": {
+      "json-server": "^0.16.3"
+    }
+  }
