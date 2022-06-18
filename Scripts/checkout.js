@@ -433,13 +433,15 @@ cardForm.addEventListener('submit',() => {
         showAlertPopupBody('Please Wait...');
         setTimeout(()=>{
             document.getElementById('thanksPopup').style.display = 'block';
-            doEmptyCart((JSON.parse(localStorage.getItem('userProfile')))[1]);
+            doEmptyCart((JSON.parse(localStorage.getItem('userProfile')))[1]).then(()=>{
+                setTimeout(()=>{
+                    document.getElementById('thanksPopup').style.display = 'none';
+                    document.getElementById('cardDetailsForm').reset();
+        
+                },4000)
+            });
         },2000);
-        setTimeout(()=>{
-            document.getElementById('thanksPopup').style.display = 'none';
-            document.getElementById('cardDetailsForm').reset();
-
-        },4000)
+        
 
     }
 })
