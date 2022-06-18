@@ -137,7 +137,10 @@ async function addToCart(item){
             item.count = 1;
             userCart.push(item);
         }
-        postCartInDataBase(userCart,loggedUserData[1]);
+        postCartInDataBase(userCart,loggedUserData[1]).then(()=>{
+            showCartAtNavBar();
+        });
+        
         // console.log(userCart);
     }
     else{
