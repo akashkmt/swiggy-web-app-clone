@@ -1,7 +1,8 @@
 # [Swiggy-Clone](https://akashkmt.github.io/swiggy-web-app-clone/)
 <h2>An Online Food Ordering Web App</h2>
 <h3>Here you can order food online from your favourite restaurant</h3>
-<h4>Tech Stack : HTML | CSS | JavaScript | JSON-Server</h4>
+<h3>A collaborative project built by 4 Developers within 7 days.</h3>
+<h4>Tech Stack : HTML | CSS | JavaScript | JSON Server</h4>
 <h4>Features : </h4>
 <p>---> Sign Up | Login</p>
 <p>---> Landing Page | Home Page | Restaurant Page ( Dynamic )</p>
