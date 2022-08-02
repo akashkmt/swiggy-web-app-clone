@@ -437,7 +437,7 @@ cardForm.addEventListener('submit',() => {
                 setTimeout(()=>{
                     document.getElementById('thanksPopup').style.display = 'none';
                     document.getElementById('cardDetailsForm').reset();
-                    window.location.href = './index.html';
+                    window.location.href = 'https://akashkmt.github.io/swiggy-web-app-clone/index.html';
                 },4000)
             });
         },2000);
